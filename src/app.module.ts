@@ -10,11 +10,11 @@ import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handleba
   imports: [
     MailerModule.forRoot({
       transport: {
-        host: 'smtp.office365.com',
-        port: 587,
+        host: 'CONFIGURE AQUI',
+        port: CONFIGURE AQUI,
         auth: {
-          user: 'no_reply_conecthus@outlook.com',
-          pass: 'itbam@2022',
+          user: 'CONFIGURE AQUI',
+          pass: 'CONFIGURE AQUI',
         },
       },
       template: {

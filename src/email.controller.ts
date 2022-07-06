@@ -10,7 +10,7 @@ export class EmailController {
   async plainTextEmail(@Query('toemail') toEmail) {
     var response = await this.mailService.sendMail({
       to:toEmail,
-      from:"no_reply_conecthus@outlook.com",
+      from:"CONFIGURE AQUI",
       subject: 'Plain Text Email ✔',
       text: 'Welcome NestJS Email Sending Tutorial', 
     });
@@ -21,7 +21,7 @@ export class EmailController {
   async postHTMLEmail(@Body() superHero: any) {
     var response = await this.mailService.sendMail({
       to: 'leonardoalvessouza94@gmail.com',
-      from: 'no_reply_conecthus@outlook.com',
+      from: 'CONFIGURE AQUI',
       subject: 'HTML Dynamic Template',
       template: 'superhero',
       context: {
@@ -36,7 +36,7 @@ export class EmailController {
   async fileAttachement(@Query('toemail') toemail){
     var response = await this.mailService.sendMail({
       to: toemail,
-      from: 'no_reply_conecthus@outlook.com',
+      from: 'CONFIGURE AQUI',
       subject: 'File Attachment',
       html: "<h1>File Attachment</h1>",
       attachments:[{
