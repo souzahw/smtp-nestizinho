@@ -20,8 +20,8 @@ export class EmailController {
   @Post('html-email')
   async postHTMLEmail(@Body() superHero: any) {
     var response = await this.mailService.sendMail({
-      to: 'leonardoalvessouza94@gmail.com',
-      from: 'CONFIGURE AQUI',
+      to: 'CONFIGURE O ENVIO AQUI',
+      from: 'CONFIGURE A ORIGEM AQUI',
       subject: 'HTML Dynamic Template',
       template: 'superhero',
       context: {
@@ -36,7 +36,7 @@ export class EmailController {
   async fileAttachement(@Query('toemail') toemail){
     var response = await this.mailService.sendMail({
       to: toemail,
-      from: 'CONFIGURE AQUI',
+      from: 'CONFIGURE A ORIGEM AQUI',
       subject: 'File Attachment',
       html: "<h1>File Attachment</h1>",
       attachments:[{
